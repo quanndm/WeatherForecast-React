@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import logo from "../perfect-day.svg";
 const WeatherLogo = styled.img`
     width: 140px;
     height: 140px;
@@ -42,7 +43,7 @@ const CityComponent = (props) => {
     const {setCity, fetchWeather} = props;
     return (
         <>
-            <WeatherLogo src="/icons/perfect-day.svg"/>
+            <WeatherLogo src={logo}/>
             <ChooseCityLabel>Find Weather of your city</ChooseCityLabel>
             <SearchBox onSubmit={fetchWeather}>
                 <input type="text" placeholder="City" onChange={(e)=>setCity(e.target.value)}/>
